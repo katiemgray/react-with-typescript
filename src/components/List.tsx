@@ -1,15 +1,16 @@
 // take in arr of obj and render as list
 import { render } from "@testing-library/react";
 import React from "react"; 
+import {IState as IProps } from "../App"
 
-interface IProps {
-    people: { // <----- defines that it is an object
-      name: string
-      age: number
-      url: string
-      note?: string // <------ defines that this is field optional with the ?
-    }[] // <--- defines that it is an array of objects
-  }
+// interface IProps {
+//     people: { // <----- defines that it is an object
+//       name: string
+//       age: number
+//       url: string
+//       note?: string // <------ defines that this is field optional with the ?
+//     }[] // <--- defines that it is an array of objects
+//   }
 
 //   One way to do it
 // const List = (props: IProps ) => {

@@ -5,7 +5,7 @@ import List from './components/List';
 import AddToList from './components/AddToList';
 
 //4. defines a certain type, set outside of the function
-interface IState {
+export interface IState { // export this interface because a child will use this as well
   people: { // <----- defines that it is an object
     name: string
     age: number
@@ -66,7 +66,7 @@ function App() {
     <div className="App">
       <h1>People Invited to our Party</h1>
       <List people={people}/> 
-      <AddToList /> 
+      <AddToList people={people} setPeople={setPeople}/> 
     </div>
   );
 }
