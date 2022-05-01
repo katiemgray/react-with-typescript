@@ -45,7 +45,14 @@ function App() {
   //3.  but what about if we want to start with an empty array for state? - so we have to define the types manually
   // rather than throw all of the type definitions instide the <> for state, we create an interface to pass to it instead
 
-  const [people, setPeople] = useState<IState["people"]>([]) // <--- now we can access our interface
+  const [people, setPeople] = useState<IState["people"]>([
+    {
+      name: "Lebron James", 
+      url: "", 
+      age: 36, 
+      note: "some note goes here"
+    }
+  ]) // <--- now we can access our interface
   // 5. Next piece will be typing props with typescript - ie if another component is rendering the data, how do we pass typed props to it
   // if you don't define the types for the props for the component that you are trying to pass to, it won't work
 
