@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import List from './components/List'; 
+import AddToList from './components/AddToList';
 
 //4. defines a certain type, set outside of the function
 interface IState {
@@ -65,6 +66,7 @@ function App() {
     <div className="App">
       <h1>People Invited to our Party</h1>
       <List people={people}/> 
+      <AddToList /> 
     </div>
   );
 }
